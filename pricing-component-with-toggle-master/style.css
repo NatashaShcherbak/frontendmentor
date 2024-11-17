@@ -1,0 +1,184 @@
+:root {
+    --white: #ffffff;
+    --very-light-grayish-blue: #f6f6fe;
+    --light-grayish-blue: #b3b5c6;
+    --grayish-blue: #6d708d;
+    --dark-grayish-blue: #494c5f;
+    --gradient-light: #a3a8f0;
+    --gradient-dark: #696fdd;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    min-width: 375px;
+    background: url(./images/bg-top.svg) top -4% right -180px, var(--very-light-grayish-blue);
+    background-repeat: no-repeat;
+}
+.container {
+    max-width: 1440px;
+    min-width: 375px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.price__title {
+    color: var(--grayish-blue);
+    text-transform: capitalize;
+    font-size: 32px;
+    padding-bottom: 34px;
+}
+.price__term {
+    padding-bottom: 68px;
+}
+.price__term-input {
+    display: none;
+}
+.price__term-switch {
+    width: 72px;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(140deg, var(--gradient-light) 0%, var(--gradient-dark)100%);
+    cursor: pointer;
+    position: relative;
+}
+.price__term-switch::before {
+    content: "";
+    background-color: var(--white);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+.price__term-input:checked + .price__term-switch {
+    background: linear-gradient(90deg, var(--gradient-light) 54%, var(--gradient-dark)100%);
+    transition: 0.3s;
+}
+.price__term-input:checked + .price__term-switch::before {
+    left: auto;
+    right: 4px;
+}
+.price__term-text {
+    font-size: 18px;
+    color: var(--light-grayish-blue);
+    padding: 0 24px;
+}
+.wrapper {
+    flex-direction: column;
+}
+.price__item {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin-bottom: 32px;
+    width: 80%;
+    max-width: 400px;
+}
+.price__item:last-of-type {
+    margin-bottom: 0;
+}
+.price__item:nth-of-type(2n) {
+    background: linear-gradient(140deg, var(--gradient-light) 0%, var(--gradient-dark)100%);
+}
+.text {
+    color: var(--grayish-blue);
+}
+.price__item:nth-of-type(2n) .text {
+    color: var(--white);
+}
+.text_large {
+    font-size: 18px;
+}
+.price__item-cost {
+    font-size: 48px;
+    color: var(--dark-grayish-blue);
+    padding: 24px 0;
+}
+.price__item:nth-of-type(2n) .price__item-cost {
+    color: var(--white);
+}
+.price__item-cost span {
+    font-size: 32px;
+}
+.price__item-list {
+    list-style: none;
+    padding: 0;
+}
+.price__item-list li {
+    border-top: 2px solid var(--light-grayish-blue);
+    padding: 16px 0;
+}
+.price__item-list li:last-of-type {
+    border-bottom: 2px solid var(--light-grayish-blue);
+    margin-bottom: 40px;
+}
+.price__item:nth-of-type(2n) .price__item-list li {
+    border-top: 2px solid var(--white);
+}
+.price__item:nth-of-type(2n) .price__item-list li:last-of-type {
+    border-bottom: 2px solid var(--white);
+    margin-bottom: 40px;
+}
+.price__item-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--white);
+    height: 48px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(140deg, var(--gradient-light) 0%, var(--gradient-dark)100%);
+}
+.price__item:nth-of-type(2n) .price__item-link {
+    color: var(--gradient-dark);
+    background: var(--white);
+}
+.price__item-link:hover {
+    background: var(--white);
+    color: var(--gradient-dark);
+    border: 1px solid var(--gradient-dark);
+    transition: 0.3s;
+}
+.price__item:nth-of-type(2n) .price__item-link:hover {
+    background: linear-gradient(140deg, var(--gradient-light) 0%, var(--gradient-dark)100%);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+@media (min-width: 992px) {
+    body {
+        background: url(./images/bg-top.svg) top -4% right -90px, url(./images/bg-bottom.svg) bottom -26% left, var(--very-light-grayish-blue); 
+        background-repeat: no-repeat;
+    }
+    .wrapper {
+        flex-direction: row;
+        padding: 38px 20px;
+    }
+    .price__item {
+        margin: 0;
+        width: 33.333%;
+    }
+    .price__item:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+    .price__item:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+    .price__item:nth-child(2) {
+        padding: 60px 30px;
+    }
+}

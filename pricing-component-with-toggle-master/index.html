@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Pricing Component With Toggle Master</title>
+</head>
+<body>
+    <div class="price container">
+        <h2 class="price__title">Our pricing</h2>
+        <div class="price__term flex">
+            <p class="price__term-text">Annually</p>
+            <input class="price__term-input" type="checkbox" id="switch">
+            <label for="switch" class="price__term-switch" tabindex="1"></label>
+            <p class="price__term-text">Monthly</p>
+        </div>
+        <div class="wrapper flex">
+            <div class="price__item">
+                <h4 class="text text_large">Basic</h4>
+                <p class="price__item-cost flex js--basic"><span>&#36;</span>199.99</p>
+                <ul class="price__item-list">
+                    <li class="text">500 GB Storage</li>
+                    <li class="text">2 Users Allowed</li>
+                    <li class="text">Send up to 3 GB</li>
+                </ul>
+                <a class="price__item-link flex" href="#">Learn more</a>
+            </div>
+            <div class="price__item">
+                <h4 class="text text_large">Professional</h4>
+                <p class="price__item-cost flex js--professional"><span>&#36;</span>249.99</p>
+                <ul class="price__item-list">
+                    <li class="text">1 TB Storage</li>
+                    <li class="text">5 Users Allowed</li>
+                    <li class="text">Send up to 10 GB</li>
+                </ul>
+                <a class="price__item-link flex" href="#">Learn more</a>
+            </div>
+            <div class="price__item">
+                <h4 class="text text_large">Master</h4>
+                <p class="price__item-cost flex js--master"><span>&#36;</span>399.99</p>
+                <ul class="price__item-list">
+                    <li class="text">2 TB Storage</li>
+                    <li class="text">10 Users Allowed</li>
+                    <li class="text">Send up to 20 GB</li>
+                </ul>
+                <a class="price__item-link flex" href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
