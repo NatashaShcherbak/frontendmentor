@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/NatashaShcherbak/frontendmentor.git)
+- Solution URL: (https://github.com/NatashaShcherbak/frontendmentor/tree/master/pricing-component-with-toggle-master)
 
 ## My process
 
