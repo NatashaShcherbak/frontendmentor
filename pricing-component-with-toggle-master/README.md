@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/NatashaShcherbak/frontendmentor/tree/master/pricing-component-with-toggle-master)
+- Solution URL Github: (https://github.com/NatashaShcherbak/frontendmentor/tree/master/pricing-component-with-toggle-master)
+- Solution URL: (https://pricing-component-with-toggle-master.tiiny.site/)
 
 ## My process
 
